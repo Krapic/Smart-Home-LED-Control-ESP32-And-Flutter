@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/PlatformIO-Build-FF6600?style=for-the-badge&logo=platformio&logoColor=white" alt="PlatformIO"/>
 </p>
 
-<h1 align="center">Smart Home LED Control</h1>
+<h1 align="center">🏠 Smart Home LED Control</h1>
 <h3 align="center">ESP32 & Flutter IoT Lighting System</h3>
 
 <p align="center">
@@ -16,44 +16,44 @@
 ---
 
 <p align="center">
-  <a href="#-key-features">Features</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-system-architecture">Architecture</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-hardware-requirements">Hardware</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-getting-started">Getting Started</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-mqtt-protocol">MQTT Protocol</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-ble-provisioning">BLE Provisioning</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-flutter-app">Flutter App</a>
+  <a href="#-key-features">✨ Features</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-system-architecture">🏗️ Architecture</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-hardware-requirements">🔧 Hardware</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-getting-started">🚀 Getting Started</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-mqtt-protocol">📡 MQTT Protocol</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-ble-provisioning">📶 BLE Provisioning</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-flutter-app">📱 Flutter App</a>
 </p>
 
 ---
 
-## Key Features
+## ✨ Key Features
 
 <table>
 <tr>
 <td width="50%">
 
-### ESP32 Firmware
-- **Dual LED Control** -- Independent on/off and brightness (0-255) for two LED channels via PWM
-- **Automatic Mode** -- LEDs activate when motion is detected in low-light conditions (< 30 lux)
-- **4 Environmental Sensors** -- BH1750 (light), BME280 (temperature, humidity, pressure), PIR (motion)
-- **BLE Provisioning** -- Zero-config device setup via Bluetooth Low Energy
-- **MQTT Integration** -- Real-time bidirectional control and sensor data streaming
-- **Persistent Config** -- All settings stored in ESP32 Non-Volatile Storage (NVS)
-- **Auto-Reconnect** -- Automatic WiFi and MQTT reconnection with retry logic
+### 🔌 ESP32 Firmware
+- 💡 **Dual LED Control** -- Independent on/off and brightness (0-255) for two LED channels via PWM
+- 🤖 **Automatic Mode** -- LEDs activate when motion is detected in low-light conditions (< 30 lux)
+- 🌡️ **4 Environmental Sensors** -- BH1750 (light), BME280 (temperature, humidity, pressure), PIR (motion)
+- 📶 **BLE Provisioning** -- Zero-config device setup via Bluetooth Low Energy
+- 📡 **MQTT Integration** -- Real-time bidirectional control and sensor data streaming
+- 💾 **Persistent Config** -- All settings stored in ESP32 Non-Volatile Storage (NVS)
+- 🔄 **Auto-Reconnect** -- Automatic WiFi and MQTT reconnection with retry logic
 
 </td>
 <td width="50%">
 
-### Flutter Mobile App
-- **Device Discovery** -- Automatic BLE scanning for SmartLED devices
-- **4-Step Setup Wizard** -- Guided device provisioning (Scan, WiFi, MQTT, Verify)
-- **Real-Time Dashboard** -- Live sensor readings updated every 5 seconds
-- **Independent LED Control** -- Separate brightness sliders and toggles per LED
-- **Mode Switching** -- Toggle between automatic and manual control
-- **Quick Presets** -- One-tap brightness presets (0%, 25%, 50%, 100%)
-- **Motion Indicator** -- Animated visual feedback for motion detection
-- **Dark Theme UI** -- Material 3 design with an eye-friendly dark color scheme
+### 📱 Flutter Mobile App
+- 🔍 **Device Discovery** -- Automatic BLE scanning for SmartLED devices
+- 🧙 **4-Step Setup Wizard** -- Guided device provisioning (Scan, WiFi, MQTT, Verify)
+- 📊 **Real-Time Dashboard** -- Live sensor readings updated every 5 seconds
+- 🎛️ **Independent LED Control** -- Separate brightness sliders and toggles per LED
+- 🔀 **Mode Switching** -- Toggle between automatic and manual control
+- ⚡ **Quick Presets** -- One-tap brightness presets (0%, 25%, 50%, 100%)
+- 🏃 **Motion Indicator** -- Animated visual feedback for motion detection
+- 🌙 **Dark Theme UI** -- Material 3 design with an eye-friendly dark color scheme
 
 </td>
 </tr>
@@ -61,7 +61,7 @@
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
 ```
                                     SYSTEM OVERVIEW
@@ -101,7 +101,7 @@
                                +-----------------+
 ```
 
-### Communication Flow
+### 🔄 Communication Flow
 
 ```
   SETUP PHASE (One-time, via BLE)         CONTROL PHASE (Ongoing, via MQTT)
@@ -125,9 +125,9 @@
 
 ---
 
-## Hardware Requirements
+## 🔧 Hardware Requirements
 
-### Components
+### 🧩 Components
 
 | Component | Description | Interface | Notes |
 |:----------|:------------|:----------|:------|
@@ -138,7 +138,7 @@
 | **LED x2** | Controlled light sources | PWM GPIO | Any standard LEDs with resistors, or LED strips via MOSFET |
 | **Resistors** | Current limiting for LEDs | -- | Value depends on LED specifications |
 
-### Wiring Diagram
+### 🔌 Wiring Diagram
 
 ```
                          ESP32 DevKit
@@ -153,7 +153,7 @@
                      +------------------+
 ```
 
-### Pin Configuration
+### 📌 Pin Configuration
 
 ```c
 // LED Control (PWM)
@@ -172,9 +172,9 @@
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
 | Tool | Purpose | Installation |
 |:-----|:--------|:-------------|
@@ -183,11 +183,11 @@
 | **MQTT Broker** | Message routing (e.g. Mosquitto) | [mosquitto.org](https://mosquitto.org/download/) |
 | **Android SDK** | Android app compilation | Included with Android Studio |
 
-### 1. Flash the ESP32 Firmware
+### 1️⃣ Flash the ESP32 Firmware
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/Smart-Home-LED-Control-ESP32-And-Flutter.git
+git clone https://github.com/Krapic/Smart-Home-LED-Control-ESP32-And-Flutter.git
 cd Smart-Home-LED-Control-ESP32-And-Flutter
 
 # Build and upload firmware
@@ -203,7 +203,7 @@ On first boot, the ESP32 will:
 2. Start advertising via BLE as `SmartLED-XXXXXX`
 3. Wait for provisioning from the mobile app
 
-### 2. Set Up the MQTT Broker
+### 2️⃣ Set Up the MQTT Broker
 
 ```bash
 # Example: Install and start Mosquitto on your local network
@@ -219,9 +219,9 @@ brew services start mosquitto
 # Download installer from https://mosquitto.org/download/
 ```
 
-> **Note:** The broker must be reachable from both the ESP32 (WiFi) and your phone (WiFi/LAN). A local Raspberry Pi or any always-on machine on the same network works well.
+> 💡 **Note:** The broker must be reachable from both the ESP32 (WiFi) and your phone (WiFi/LAN). A local Raspberry Pi or any always-on machine on the same network works well.
 
-### 3. Build and Run the Flutter App
+### 3️⃣ Build and Run the Flutter App
 
 ```bash
 cd FlutterApp
@@ -236,7 +236,7 @@ flutter run
 flutter build apk
 ```
 
-### 4. Provision the Device
+### 4️⃣ Provision the Device
 
 Once the app is running and the ESP32 is powered on:
 
@@ -246,12 +246,12 @@ Step 2  -->  Select your "SmartLED-XXXXXX" device
 Step 3  -->  Enter your WiFi credentials (SSID + Password)
 Step 4  -->  Enter your MQTT broker address and port (default: 1883)
 Step 5  -->  Tap "Connect" and wait for verification
-   Done -->  The app transitions to the Control Dashboard
+   Done -->  The app transitions to the Control Dashboard ✅
 ```
 
 ---
 
-## MQTT Protocol
+## 📡 MQTT Protocol
 
 All MQTT communication follows the topic format:
 
@@ -259,15 +259,15 @@ All MQTT communication follows the topic format:
 smarthome/{deviceId}/{topic}
 ```
 
-### Topics Reference
+### 📋 Topics Reference
 
 | Topic | Direction | QoS | Description |
 |:------|:----------|:----|:------------|
-| `smarthome/{id}/led/set` | App --> ESP32 | 0 | Send LED control commands |
-| `smarthome/{id}/led/status` | ESP32 --> App | 0 | LED state change confirmations |
-| `smarthome/{id}/sensors` | ESP32 --> App | 0 | Sensor data (published every 5s) |
+| `smarthome/{id}/led/set` | App ➡️ ESP32 | 0 | Send LED control commands |
+| `smarthome/{id}/led/status` | ESP32 ➡️ App | 0 | LED state change confirmations |
+| `smarthome/{id}/sensors` | ESP32 ➡️ App | 0 | Sensor data (published every 5s) |
 
-### LED Control Command
+### 💡 LED Control Command
 
 Published by the app to `smarthome/{id}/led/set`:
 
@@ -293,7 +293,7 @@ Published by the app to `smarthome/{id}/led/set`:
 | `led2.state` | string | `"on"`, `"off"` | LED2 power state |
 | `led2.brightness` | int | `0` - `255` | LED2 brightness level |
 
-### LED Status Response
+### 📤 LED Status Response
 
 Published by ESP32 to `smarthome/{id}/led/status`:
 
@@ -305,7 +305,7 @@ Published by ESP32 to `smarthome/{id}/led/status`:
 }
 ```
 
-### Sensor Data Payload
+### 🌡️ Sensor Data Payload
 
 Published by ESP32 to `smarthome/{id}/sensors` every 5 seconds:
 
@@ -325,18 +325,18 @@ Published by ESP32 to `smarthome/{id}/sensors` every 5 seconds:
 | Field | Unit | Range | Sensor |
 |:------|:-----|:------|:-------|
 | `lux` | lx | 0 - 65535 | BH1750 |
-| `temperature` | C | -40 to 85 | BME280 |
+| `temperature` | °C | -40 to 85 | BME280 |
 | `humidity` | % | 0 - 100 | BME280 |
 | `pressure` | hPa | 300 - 1100 | BME280 |
 | `motion` | bool | `true` / `false` | PIR |
 
 ---
 
-## BLE Provisioning
+## 📶 BLE Provisioning
 
 The ESP32 exposes a GATT service for initial device configuration over Bluetooth Low Energy.
 
-### Service & Characteristics
+### 🔑 Service & Characteristics
 
 **Service UUID:** `12345678-1234-1234-1234-123456789abc`
 
@@ -350,26 +350,26 @@ The ESP32 exposes a GATT service for initial device configuration over Bluetooth
 | Status | `...ab6` | Read / Notify | Connection status updates |
 | Command | `...ab7` | Write | Control commands |
 
-### BLE Commands
+### ⌨️ BLE Commands
 
 Write these strings to the Command characteristic (`...ab7`):
 
 | Command | Action |
 |:--------|:-------|
-| `SAVE` | Persist current config to NVS |
-| `CONNECT` | Save config and initiate WiFi + MQTT connection |
-| `STATUS` | Request current connection status via Notify |
-| `RESET` | Clear all stored configuration |
+| `SAVE` | 💾 Persist current config to NVS |
+| `CONNECT` | 🔗 Save config and initiate WiFi + MQTT connection |
+| `STATUS` | 📊 Request current connection status via Notify |
+| `RESET` | 🗑️ Clear all stored configuration |
 
-### Device Naming
+### 🏷️ Device Naming
 
 The ESP32 advertises as `SmartLED-XXXXXX` where `XXXXXX` is derived from the first 6 hex characters of the auto-generated Device ID (based on the ESP32 eFuse MAC address).
 
 ---
 
-## Flutter App
+## 📱 Flutter App
 
-### App Architecture
+### 🏛️ App Architecture
 
 The app follows the **Provider** pattern for state management with a clean separation of concerns:
 
@@ -390,7 +390,7 @@ lib/
  |-- models/                       # (Reserved for future data models)
 ```
 
-### Services
+### ⚙️ Services
 
 | Service | Responsibility | Key Methods |
 |:--------|:---------------|:------------|
@@ -398,30 +398,30 @@ lib/
 | **MqttService** | MQTT connection, subscribe to topics, publish commands, track state | `connect()`, `setLed1State()`, `setLed2Brightness()`, `setMode()`, `disconnect()` |
 | **DeviceState** | Persist and load device config using SharedPreferences | `loadState()`, `saveState()`, `clearState()` |
 
-### Screens
+### 🖥️ Screens
 
-#### Home Screen
+#### 🏠 Home Screen
 The app entry point. On launch it loads any saved device configuration. If a device is already configured, it auto-connects to MQTT and shows the Control Screen. Otherwise, it navigates to the Setup Screen.
 
-#### Setup Screen -- 4-Step Wizard
+#### 🧙 Setup Screen -- 4-Step Wizard
 
 | Step | Title | Description |
 |:-----|:------|:------------|
-| 1 | **Scan & Connect** | Scans for BLE devices advertising as `SmartLED-*`, displays discovered devices, and connects on tap |
-| 2 | **WiFi Configuration** | Text fields for SSID and password, writes credentials to BLE characteristics |
-| 3 | **MQTT Configuration** | Text fields for broker address and port, writes config to BLE characteristics |
-| 4 | **Verify Connection** | Sends `CONNECT` command, waits for status notification, displays WiFi/MQTT connection results |
+| 1 | 🔍 **Scan & Connect** | Scans for BLE devices advertising as `SmartLED-*`, displays discovered devices, and connects on tap |
+| 2 | 📶 **WiFi Configuration** | Text fields for SSID and password, writes credentials to BLE characteristics |
+| 3 | 📡 **MQTT Configuration** | Text fields for broker address and port, writes config to BLE characteristics |
+| 4 | ✅ **Verify Connection** | Sends `CONNECT` command, waits for status notification, displays WiFi/MQTT connection results |
 
-#### Control Screen -- Dashboard
+#### 🎛️ Control Screen -- Dashboard
 
 The main interface after setup, featuring:
-- **LED Control Card** -- Mode toggle (Auto/Manual), individual LED on/off buttons with animated glow effect, vertical brightness sliders, and quick preset buttons (Off, 25%, 50%, 100%)
-- **Sensor Grid** -- Four cards displaying temperature (color-coded), humidity, light level (lux), and atmospheric pressure
-- **Motion Indicator** -- Animated indicator when the PIR sensor detects motion
-- **Connection Status** -- Visual feedback for MQTT connection state
-- **Menu Options** -- Reconnect, setup new device, or reset configuration
+- 💡 **LED Control Card** -- Mode toggle (Auto/Manual), individual LED on/off buttons with animated glow effect, vertical brightness sliders, and quick preset buttons (Off, 25%, 50%, 100%)
+- 🌡️ **Sensor Grid** -- Four cards displaying temperature (color-coded), humidity, light level (lux), and atmospheric pressure
+- 🏃 **Motion Indicator** -- Animated indicator when the PIR sensor detects motion
+- 🔗 **Connection Status** -- Visual feedback for MQTT connection state
+- ⚙️ **Menu Options** -- Reconnect, setup new device, or reset configuration
 
-### Theme & Design
+### 🎨 Theme & Design
 
 | Property | Value |
 |:---------|:------|
@@ -434,7 +434,7 @@ The main interface after setup, featuring:
 
 ---
 
-## Automatic Mode Logic
+## 🤖 Automatic Mode Logic
 
 When the system is set to **Auto** mode, the ESP32 firmware handles LED control autonomously:
 
@@ -482,9 +482,9 @@ When the system is set to **Auto** mode, the ESP32 firmware handles LED control 
 
 ---
 
-## Data Persistence
+## 💾 Data Persistence
 
-### ESP32 -- Non-Volatile Storage (NVS)
+### 🔌 ESP32 -- Non-Volatile Storage (NVS)
 
 Settings are stored under the `"smarthome"` namespace and survive power cycles and firmware updates:
 
@@ -496,7 +496,7 @@ Settings are stored under the `"smarthome"` namespace and survive power cycles a
 | `mqtt_port` | MQTT broker port | `"1883"` |
 | `device_id` | Unique device identifier | `"a1b2c3d4e5f6a7b8"` |
 
-### Flutter App -- SharedPreferences
+### 📱 Flutter App -- SharedPreferences
 
 | Key | Content | Purpose |
 |:----|:--------|:--------|
@@ -507,7 +507,7 @@ Settings are stored under the `"smarthome"` namespace and survive power cycles a
 
 ---
 
-## Android Permissions
+## 🔐 Android Permissions
 
 The app requires the following permissions (declared in `AndroidManifest.xml`):
 
@@ -525,12 +525,12 @@ The app requires the following permissions (declared in `AndroidManifest.xml`):
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 Smart-Home-LED-Control-ESP32-And-Flutter/
 |
-|-- ESP32/                              # Firmware
+|-- ESP32/                              # 🔌 Firmware
 |   |-- platformio.ini                  # Build configuration & dependencies
 |   |-- src/
 |   |   |-- main.cpp                    # Complete firmware source (~680 lines)
@@ -538,7 +538,7 @@ Smart-Home-LED-Control-ESP32-And-Flutter/
 |   |-- lib/                            # Local libraries
 |   |-- test/                           # Unit tests
 |
-|-- FlutterApp/                         # Mobile application
+|-- FlutterApp/                         # 📱 Mobile application
 |   |-- pubspec.yaml                    # Dart/Flutter dependencies
 |   |-- lib/
 |   |   |-- main.dart                   # App entry point & theme
@@ -557,46 +557,46 @@ Smart-Home-LED-Control-ESP32-And-Flutter/
 |   |-- android/                        # Android native config
 |   |-- ios/                            # iOS native config
 |
-|-- README.md                           # This file
+|-- README.md                           # 📖 This file
 ```
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 <table>
 <tr>
 <td align="center" width="150">
 
-**ESP32**<br/>
+**🔌 ESP32**<br/>
 Arduino Framework<br/>
 PlatformIO
 
 </td>
 <td align="center" width="150">
 
-**Flutter**<br/>
+**📱 Flutter**<br/>
 Dart 3.0+<br/>
 Material 3
 
 </td>
 <td align="center" width="150">
 
-**BLE**<br/>
+**📶 BLE**<br/>
 GATT Server<br/>
 flutter_blue_plus
 
 </td>
 <td align="center" width="150">
 
-**MQTT**<br/>
+**📡 MQTT**<br/>
 PubSubClient<br/>
 mqtt_client
 
 </td>
 <td align="center" width="150">
 
-**Sensors**<br/>
+**🌡️ Sensors**<br/>
 BH1750 + BME280<br/>
 PIR HC-SR501
 
@@ -604,7 +604,7 @@ PIR HC-SR501
 </tr>
 </table>
 
-### Firmware Dependencies
+### 🔌 Firmware Dependencies
 
 | Library | Purpose |
 |:--------|:--------|
@@ -614,7 +614,7 @@ PIR HC-SR501
 | [PubSubClient](https://github.com/knolleary/pubsubclient) | MQTT client for Arduino |
 | [ArduinoJson](https://github.com/bblanchon/ArduinoJson) | JSON serialization/deserialization |
 
-### Flutter Dependencies
+### 📱 Flutter Dependencies
 
 | Package | Version | Purpose |
 |:--------|:--------|:--------|
@@ -628,10 +628,10 @@ PIR HC-SR501
 
 ---
 
-## Troubleshooting
+## ❓ Troubleshooting
 
 <details>
-<summary><strong>BLE device not appearing in scan</strong></summary>
+<summary>📶 <strong>BLE device not appearing in scan</strong></summary>
 
 - Ensure Bluetooth and Location are enabled on your phone
 - On Android 12+, grant "Nearby Devices" permission
@@ -641,7 +641,7 @@ PIR HC-SR501
 </details>
 
 <details>
-<summary><strong>WiFi connection fails during provisioning</strong></summary>
+<summary>📡 <strong>WiFi connection fails during provisioning</strong></summary>
 
 - Verify SSID and password are correct (case-sensitive)
 - ESP32 supports 2.4 GHz WiFi only (not 5 GHz)
@@ -651,7 +651,7 @@ PIR HC-SR501
 </details>
 
 <details>
-<summary><strong>MQTT connection fails</strong></summary>
+<summary>🔗 <strong>MQTT connection fails</strong></summary>
 
 - Verify the MQTT broker is running and accessible on the network
 - Check that the broker IP/hostname is correct
@@ -662,7 +662,7 @@ PIR HC-SR501
 </details>
 
 <details>
-<summary><strong>Sensor readings show 0 or N/A</strong></summary>
+<summary>🌡️ <strong>Sensor readings show 0 or N/A</strong></summary>
 
 - Verify I2C wiring (SDA to GPIO21, SCL to GPIO22)
 - Check sensor power supply (3.3V, not 5V for BME280)
@@ -672,7 +672,7 @@ PIR HC-SR501
 </details>
 
 <details>
-<summary><strong>LEDs not responding to commands</strong></summary>
+<summary>💡 <strong>LEDs not responding to commands</strong></summary>
 
 - Verify LED wiring to GPIO25 (LED1) and GPIO26 (LED2)
 - Check that LEDs have appropriate current-limiting resistors
@@ -683,12 +683,12 @@ PIR HC-SR501
 
 ---
 
-## License
+## 📄 License
 
 This project is open source. Feel free to use, modify, and distribute.
 
 ---
 
 <p align="center">
-  Built with ESP32 + Flutter + MQTT
+  Built with ❤️ using ESP32 + Flutter + MQTT
 </p>
