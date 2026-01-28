@@ -68,22 +68,22 @@
  ====================================================================================
 
    FLUTTER APP (Android/iOS)                         ESP32 MICROCONTROLLER
-  +---------------------------+                    +---------------------------+
-  |                           |   BLE (Setup)      |                           |
+  +---------------------------+                   +---------------------------+
+  |                          |   BLE (Setup)      |                           |
   |   +-------------------+  | =================> |  +---------------------+  |
   |   | Setup Wizard      |  |  WiFi SSID/Pass    |  | BLE GATT Server     |  |
   |   | (4-Step Stepper)  |  |  MQTT Broker/Port  |  | Service: 1234...abc |  |
   |   +-------------------+  |  Device ID         |  +---------------------+  |
-  |                           |                    |            |              |
+  |                          |                    |            |              |
   |   +-------------------+  |   MQTT (Control)   |            v              |
   |   | Control Dashboard |  | <=================>|  +---------------------+  |
-  |   |                   |  |  LED Commands       |  | WiFi + MQTT Client  |  |
-  |   | - LED Brightness  |  |  Sensor Data        |  +---------------------+  |
-  |   | - Sensor Readings |  |  Status Updates     |            |              |
+  |   |                   |  |  LED Commands      |  | WiFi + MQTT Client  |  |
+  |   | - LED Brightness  |  |  Sensor Data       |  +---------------------+  |
+  |   | - Sensor Readings |  |  Status Updates    |            |              |
   |   | - Mode Toggle     |  |                    |            v              |
   |   | - Motion Status   |  |                    |  +---------------------+  |
   |   +-------------------+  |                    |  | Hardware Control    |  |
-  |                           |                    |  |                     |  |
+  |                          |                    |  |                     |  |
   |   +-------------------+  |                    |  | LED1 (GPIO25) PWM   |  |
   |   | State Management  |  |                    |  | LED2 (GPIO26) PWM   |  |
   |   | (Provider)        |  |                    |  | PIR  (GPIO27)       |  |
@@ -97,7 +97,7 @@
                                         v
                                +-----------------+
                                |   MQTT Broker   |
-                               |  (e.g. Mosquitto)|
+                               | (e.g. Mosquitto)|
                                +-----------------+
 ```
 
@@ -113,12 +113,12 @@
    |<- Advertise "SmartLED" |               |--- Connect ------->|<-- Connect ---|
    |-- Connect ------------>|               |                    |               |
    |-- Write WiFi SSID ---->|               |                    |-- Sensors --->|
-   |-- Write WiFi Pass ---->|               |<-- Sensor Data ----|  (every 5s)  |
+   |-- Write WiFi Pass ---->|               |<-- Sensor Data ----|  (every 5s)   |
    |-- Write MQTT Broker -->|               |                    |               |
    |-- Write MQTT Port ---->|               |--- LED Command --->|               |
    |-- CMD: "CONNECT" ----->|               |                    |-- LED Set --->|
-   |                        |-- WiFi ------>|               |                    |
-   |                        |-- MQTT ------>|               |<-- LED Status ----|
+   |                        |-- WiFi ------>|                    |               |
+   |                        |-- MQTT ------>|                    |<- LED Status -|
    |<- Status Notify -------|               |                    |               |
    |-- Disconnect --------->|               |                    |               |
 ```
@@ -146,9 +146,9 @@
                      |                  |
     LED1 ----[R]---- | GPIO25     GPIO21| ---- SDA (BH1750 + BME280)
     LED2 ----[R]---- | GPIO26     GPIO22| ---- SCL (BH1750 + BME280)
-    PIR  ----------- | GPIO27          |
-                     |            3V3  | ---- VCC (Sensors)
-                     |            GND  | ---- GND (All)
+    PIR  ----------- | GPIO27           |
+                     |            3V3   | ---- VCC (Sensors)
+                     |            GND   | ---- GND (All)
                      |                  |
                      +------------------+
 ```
