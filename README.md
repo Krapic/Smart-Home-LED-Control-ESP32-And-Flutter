@@ -686,9 +686,3 @@ PIR HC-SR501
 ## 📄 License
 
 This project is open source. Feel free to use, modify, and distribute.
-
----
-
-<p align="center">
-  Built with ❤️ using ESP32 + Flutter + MQTT
-</p>
